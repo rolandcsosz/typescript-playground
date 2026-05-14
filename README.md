@@ -1,69 +1,41 @@
-# React + TypeScript + Vite
+# TypeScript Playground
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![TypeScript Playground Thumbnail](./public/thumbnail.png)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The **TypeScript Playground** is a modern, high-contrast, and interactive development environment built for rapid experimentation and prototyping. It combines the power of React and TypeScript with a sleek, developer-centric UI to provide a premium coding experience.
 
-## Expanding the ESLint configuration
+## Project Goal
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The primary objective of this project is to create a seamless and aesthetically pleasing playground where developers can:
 
-```js
-export default tseslint.config([
-    globalIgnores(["dist"]),
-    {
-        files: ["**/*.{ts,tsx}"],
-        extends: [
-            // Other configs...
+- **Rapidly Prototype**: Test out TypeScript logic and React components with zero friction.
+- **Instant Feedback**: Experience ultra-fast updates through Hot Module Replacement (HMR).
+- **Modular Execution**: Run scripts and view outputs in a modular, on-demand flow.
+- **Aesthetic Excellence**: Develop in a high-contrast, modern interface designed for focus and productivity.
 
-            // Remove tseslint.configs.recommended and replace with this
-            ...tseslint.configs.recommendedTypeChecked,
-            // Alternatively, use this for stricter rules
-            ...tseslint.configs.strictTypeChecked,
-            // Optionally, add this for stylistic rules
-            ...tseslint.configs.stylisticTypeChecked,
+## Key Features
 
-            // Other configs...
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-]);
-```
+- **Powered by Vite**: Blazing fast development server and build process.
+- **Modern UI/UX**: High-contrast theme with glassmorphism and smooth animations.
+- **Modular Design**: Script execution and UI views are decoupled for maximum flexibility.
+- **SCSS Modules**: Scoped and maintainable styling using modern CSS practices.
+- **Real-time HMR**: See your changes instantly as you type.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+1. **Install Dependencies**:
 
-export default tseslint.config([
-    globalIgnores(["dist"]),
-    {
-        files: ["**/*.{ts,tsx}"],
-        extends: [
-            // Other configs...
-            // Enable lint rules for React
-            reactX.configs["recommended-typescript"],
-            // Enable lint rules for React DOM
-            reactDom.configs.recommended,
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-]);
-```
+    ```bash
+    npm install
+    ```
+
+2. **Run the Development Server**:
+
+    ```bash
+    npm run dev
+    ```
+
+3. **Start Coding**:
+   Open `content/main.ts` or `content/Main.tsx` and start building!
